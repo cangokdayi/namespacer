@@ -12,6 +12,14 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
+/**
+ * @todo Make the package-prefix option non-required and refactor the Package 
+ * 		 model to solve the emtpy dash in package names issue. 
+ * 
+ * @todo Allow configuration from a generic JSON config file or from the extra
+ * 		 config key from the composer file - command is too long with all these
+ * 	     options being defined inline.
+ */		
 class RenamespaceCommand extends Command {
 	protected static $defaultName = 'renamespace';
 	protected $rootDir = null;

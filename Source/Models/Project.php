@@ -2,6 +2,9 @@
 
 namespace ILAB\Namespacer\Models;
 
+/**
+ * @todo Add an option to exclude specific packages
+ */
 class Project {
 	/** @var string */
 	private $sourcePath;

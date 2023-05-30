@@ -8,7 +8,8 @@ if (!function_exists('arrayPath')) {
 	 * @param null $defaultValue
 	 * @return mixed|null
 	 */
-	function arrayPath($array, $path, $defaultValue = null)	{
+	function arrayPath($array, $path, $defaultValue = null)
+	{
 		$pathArray = explode('/', $path);
 
 		$config = $array;
@@ -16,7 +17,7 @@ if (!function_exists('arrayPath')) {
 		for ($i = 0; $i < count($pathArray); $i++) {
 			$part = $pathArray[$i];
 
-			if (! isset($config[$part])) {
+			if (!isset($config[$part])) {
 				return $defaultValue;
 			}
 
@@ -31,14 +32,16 @@ if (!function_exists('arrayPath')) {
 	}
 }
 
-if (!function_exists('')) {
-	function trailingslashit( $string ) {
-		return untrailingslashit( $string ) . '/';
+if (!function_exists('trailingslashit')) {
+	function trailingslashit($string)
+	{
+		return untrailingslashit($string) . '/';
 	}
 }
 
 if (!function_exists('untrailingslashit')) {
-	function untrailingslashit($string) {
+	function untrailingslashit($string)
+	{
 		return rtrim($string, '/\\');
 	}
 }
